@@ -1,0 +1,557 @@
+***PLS Schedule Analysis Report***
+
+Algorithm used: CHAI Algorithm
+
+There are 28 Orders ACCEPTED. Details are as follows:
+
+   ORDER NUMBER          START            END           DAYS       QUANTITY          PLANT
+==========================================================================================
+          P0341     2024-08-01     2024-08-02              2            600        Plant_X
+          P0341     2024-08-02     2024-08-02              1            400        Plant_Y
+          P0341     2024-08-01     2024-08-02              2           1000        Plant_Z
+          P0299     2024-08-01     2024-08-01              1            800        Plant_Y
+          P0306     2024-08-03     2024-08-04              2            600        Plant_X
+          P0306     2024-08-04     2024-08-04              1            400        Plant_Y
+          P0306     2024-08-03     2024-08-04              2           1000        Plant_Z
+          P0057     2024-08-03     2024-08-03              1            800        Plant_Y
+          P0460     2024-08-05     2024-08-06              2            600        Plant_X
+          P0460     2024-08-06     2024-08-06              1            400        Plant_Y
+          P0460     2024-08-05     2024-08-06              2           1000        Plant_Z
+          P0020     2024-08-05     2024-08-05              1            800        Plant_Y
+          P0393     2024-08-07     2024-08-08              2            600        Plant_X
+          P0393     2024-08-08     2024-08-08              1            400        Plant_Y
+          P0393     2024-08-07     2024-08-08              2           1000        Plant_Z
+          P0037     2024-08-07     2024-08-07              1            800        Plant_Y
+          P0424     2024-08-09     2024-08-10              2            600        Plant_X
+          P0424     2024-08-10     2024-08-10              1            400        Plant_Y
+          P0424     2024-08-09     2024-08-10              2           1000        Plant_Z
+          P0107     2024-08-09     2024-08-09              1            800        Plant_Y
+          P0449     2024-08-11     2024-08-12              2            600        Plant_X
+          P0449     2024-08-12     2024-08-12              1            400        Plant_Y
+          P0449     2024-08-11     2024-08-12              2           1000        Plant_Z
+          P0450     2024-08-11     2024-08-11              1            800        Plant_Y
+          P0504     2024-08-13     2024-08-14              2            600        Plant_X
+          P0504     2024-08-14     2024-08-14              1            400        Plant_Y
+          P0504     2024-08-13     2024-08-14              2           1000        Plant_Z
+          P0423     2024-08-13     2024-08-13              1            800        Plant_Y
+          P0477     2024-08-15     2024-08-16              2            600        Plant_X
+          P0477     2024-08-16     2024-08-16              1            400        Plant_Y
+          P0477     2024-08-15     2024-08-16              2           1000        Plant_Z
+          P0125     2024-08-15     2024-08-15              1            800        Plant_Y
+          P0471     2024-08-17     2024-08-18              2            600        Plant_X
+          P0471     2024-08-18     2024-08-18              1            400        Plant_Y
+          P0471     2024-08-17     2024-08-18              2           1000        Plant_Z
+          P0278     2024-08-17     2024-08-17              1            800        Plant_Y
+          P0454     2024-08-19     2024-08-20              2            600        Plant_X
+          P0454     2024-08-20     2024-08-20              1            400        Plant_Y
+          P0454     2024-08-19     2024-08-20              2           1000        Plant_Z
+          P0282     2024-08-19     2024-08-19              1            800        Plant_Y
+          P0159     2024-08-21     2024-08-22              2            600        Plant_X
+          P0159     2024-08-22     2024-08-22              1            400        Plant_Y
+          P0159     2024-08-21     2024-08-22              2           1000        Plant_Z
+          P0509     2024-08-21     2024-08-21              1            800        Plant_Y
+          P0420     2024-08-24     2024-08-26              3            900        Plant_X
+          P0420     2024-08-23     2024-08-26              4           1600        Plant_Y
+          P0420     2024-08-24     2024-08-26              3           1500        Plant_Z
+          P0308     2024-08-23     2024-08-23              1            300        Plant_X
+          P0308     2024-08-27     2024-08-27              1            300        Plant_X
+          P0308     2024-08-27     2024-08-27              1            400        Plant_Y
+          P0308     2024-08-23     2024-08-23              1            500        Plant_Z
+          P0308     2024-08-27     2024-08-27              1            500        Plant_Z
+          P0241     2024-08-28     2024-08-28              1            300        Plant_X
+          P0070     2024-08-28     2024-08-28              1            300        Plant_Y
+          P0301     2024-08-29     2024-08-30              2            600        Plant_X
+          P0301     2024-08-29     2024-08-29              1            400        Plant_Y
+          P0301     2024-08-28     2024-08-29              2           1000        Plant_Z
+          P0222     2024-08-30     2024-08-30              1            300        Plant_Y
+
+             - End -
+
+==========================================================================================
+
+There are 460 Orders REJECTED. Details are as follows:
+
+   ORDER NUMBER   PRODUCT NAME       DUE DATE       QUANTITY
+==========================================================================================
+          P0416      Product_H         739469           2000
+          P0123      Product_M         739469           2000
+          P0331      Product_J         739468           4000
+          P0510      Product_H         739472            300
+          P0187      Product_I         739468           4000
+          P0510      Product_H         739472            300
+          P0210      Product_B         739468           4000
+          P0510      Product_H         739472            300
+          P0032      Product_F         739468           4000
+          P0510      Product_H         739472            300
+          P0277      Product_I         739468           4000
+          P0510      Product_H         739472            300
+          P0086      Product_F         739468           4000
+          P0510      Product_H         739472            300
+          P0269      Product_G         739468           4000
+          P0510      Product_H         739472            300
+          P0248      Product_L         739468            500
+          P0131      Product_M         739476           4000
+          P0510      Product_H         739472            300
+          P0356      Product_D         739469           4000
+          P0203      Product_L         739467           2000
+          P0379      Product_L         739469           4000
+          P0180      Product_D         739466           2000
+          P0396      Product_E         739469           4000
+          P0320      Product_L         739467           2000
+          P0422      Product_I         739470           4000
+          P0490      Product_E         739467           2000
+          P0179      Product_I         739470           4000
+          P0408      Product_I         739467           2000
+          P0133      Product_E         739470           4000
+          P0116      Product_J         739467           2000
+          P0230      Product_J         739471           4000
+          P0093      Product_B         739469           2000
+          P0270      Product_B         739471           4000
+          P0232      Product_J         739468           2000
+          P0040      Product_D         739471           4000
+          P0458      Product_F         739468           2000
+          P0417      Product_C         739471           4000
+          P0473      Product_I         739468           2000
+          P0102      Product_L         739472           4000
+          P0145      Product_J         739470           2000
+          P0260      Product_B         739472           4000
+          P0412      Product_M         739470           2000
+          P0052      Product_D         739473           4000
+          P0152      Product_A         739470           2000
+          P0252      Product_A         739473           4000
+          P0475      Product_F         739470           2000
+          P0147      Product_H         739474           4000
+          P0030      Product_I         739470           2000
+          P0161      Product_K         739473           4000
+          P0001      Product_A         739470           2000
+          P0382      Product_H         739474           4000
+          P0174      Product_F         739472           2000
+          P0372      Product_F         739474           4000
+          P0017      Product_D         739471           2000
+          P0132      Product_G         739475           4000
+          P0054      Product_K         739472           2000
+          P0189      Product_G         739475           4000
+          P0089      Product_I         739473           2000
+          P0361      Product_K         739475           4000
+          P0231      Product_G         739474           2000
+          P0023      Product_I         739475           4000
+          P0266      Product_L         739474           2000
+          P0122      Product_E         739476           4000
+          P0141      Product_F         739474           2000
+          P0451      Product_B         739476           4000
+          P0275      Product_J         739476           2000
+          P0167      Product_D         739476           4000
+          P0061      Product_D         739475           2000
+          P0047      Product_C         739477           4000
+          P0246      Product_A         739477           2000
+          P0432      Product_M         739477           4000
+          P0322      Product_I         739477           2000
+          P0192      Product_L         739477           4000
+          P0261      Product_H         739477           2000
+          P0048      Product_D         739478           4000
+          P0335      Product_C         739477           2000
+          P0150      Product_M         739478           4000
+          P0336      Product_M         739477           2000
+          P0186      Product_K         739478           4000
+          P0474      Product_I         739477           2000
+          P0202      Product_D         739479           4000
+          P0496      Product_I         739478           2000
+          P0005      Product_C         739479           4000
+          P0501      Product_M         739478           2000
+          P0429      Product_B         739479           4000
+          P0502      Product_A         739478           2000
+          P0019      Product_E         739479           4000
+          P0348      Product_M         739477           2000
+          P0025      Product_C         739480           4000
+          P0079      Product_H         739480           2000
+          P0135      Product_M         739480           4000
+          P0368      Product_J         739478           2000
+          P0103      Product_M         739480           4000
+          P0309      Product_H         739480           2000
+          P0081      Product_B         739481           4000
+          P0271      Product_A         739480           2000
+          P0285      Product_I         739482           4000
+          P0016      Product_G         739482           2000
+          P0138      Product_M         739482           4000
+          P0468      Product_J         739482           2000
+          P0173      Product_F         739482           4000
+          P0109      Product_H         739481           2000
+          P0392      Product_J         739482           4000
+          P0325      Product_J         739481           2000
+          P0067      Product_K         739482           4000
+          P0242      Product_J         739481           2000
+          P0323      Product_M         739482           4000
+          P0008      Product_B         739482           2000
+          P0358      Product_H         739483           4000
+          P0425      Product_F         739483           2000
+          P0076      Product_D         739483           4000
+          P0255      Product_M         739484           2000
+          P0157      Product_M         739483           4000
+          P0158      Product_B         739483           2000
+          P0463      Product_C         739483           4000
+          P0007      Product_E         739484           2000
+          P0279      Product_C         739483           4000
+          P0343      Product_D         739484           2000
+          P0274      Product_I         739484           4000
+          P0092      Product_B         739486           2000
+          P0112      Product_A         739484           4000
+          P0492      Product_E         739485           2000
+          P0033      Product_F         739484           4000
+          P0137      Product_I         739486           2000
+          P0455      Product_H         739485           4000
+          P0140      Product_B         739485           4000
+          P0073      Product_B         739485           4000
+          P0329      Product_D         739487           2000
+          P0503      Product_I         739485           4000
+          P0386      Product_J         739486           4000
+          P0405      Product_I         739487           4000
+          P0084      Product_H         739487           4000
+          P0376      Product_E         739488           4000
+          P0294      Product_D         739488           4000
+          P0390      Product_A         739488           4000
+          P0462      Product_K         739489           4000
+          P0024      Product_K         739491           4000
+          P0075      Product_M         739491           4000
+          P0204      Product_D         739492           4000
+          P0268      Product_E         739492           4000
+          P0221      Product_E         739492           4000
+          P0452      Product_M         739493           4000
+          P0378      Product_C         739493           4000
+          P0236      Product_M         739465           5000
+          P0407      Product_L         739465           4000
+          P0148      Product_H         739465           4000
+          P0310      Product_C         739465           4000
+          P0128      Product_G         739466           5000
+          P0165      Product_E         739466           5000
+          P0366      Product_M         739466           5000
+          P0344      Product_B         739465           3000
+          P0212      Product_C         739465           3000
+          P0233      Product_B         739465           3000
+          P0445      Product_M         739465           3000
+          P0011      Product_J         739465           3000
+          P0184      Product_G         739465           3000
+          P0068      Product_L         739467           4000
+          P0371      Product_H         739467           4000
+          P0400      Product_I         739466           3000
+          P0062      Product_G         739465           2000
+          P0163      Product_D         739467           4000
+          P0169      Product_A         739467           4000
+          P0437      Product_K         739468           5000
+          P0244      Product_K         739465           1000
+          P0272      Product_M         739465           1000
+          P0056      Product_K         739465            200
+          P0397      Product_K         739465           1000
+          P0126      Product_D         739465           1000
+          P0154      Product_B         739467           3000
+          P0235      Product_F         739467           3000
+          P0262      Product_F         739467           3000
+          P0488      Product_F         739467           3000
+          P0091      Product_E         739469           5000
+          P0098      Product_B         739469           5000
+          P0370      Product_B         739469           5000
+          P0243      Product_F         739469           5000
+          P0229      Product_M         739469           5000
+          P0439      Product_B         739468           3000
+          P0292      Product_J         739468           3000
+          P0087      Product_B         739466           1000
+          P0383      Product_J         739466           1000
+          P0044      Product_G         739466           1000
+          P0357      Product_B         739466           1000
+          P0315      Product_E         739468           3000
+          P0031      Product_M         739468           3000
+          P0039      Product_F         739467           1000
+          P0234      Product_F         739467            100
+          P0318      Product_H         739467           1000
+          P0181      Product_A         739467           1000
+          P0228      Product_A         739469           3000
+          P0313      Product_H         739469           3000
+          P0346      Product_B         739469           3000
+          P0215      Product_D         739471           5000
+          P0251      Product_L         739471           5000
+          P0245      Product_H         739470           3000
+          P0402      Product_H         739470           3000
+          P0287      Product_C         739470           3000
+          P0205      Product_B         739470           3000
+          P0218      Product_M         739468           1000
+          P0481      Product_I         739468           1000
+          P0041      Product_D         739470           3000
+          P0507      Product_F         739470           3000
+          P0110      Product_I         739472           5000
+          P0505      Product_E         739472           5000
+          P0250      Product_F         739469            400
+          P0002      Product_C         739471           3000
+          P0296      Product_J         739471           3000
+          P0220      Product_F         739471           3000
+          P0034      Product_B         739469           1000
+          P0478      Product_C         739469           1000
+          P0284      Product_B         739469           1000
+          P0409      Product_G         739469            400
+          P0508      Product_D         739473           5000
+          P0290      Product_C         739473           5000
+          P0369      Product_I         739472           3000
+          P0489      Product_J         739471           1000
+          P0021      Product_C         739471           1000
+          P0178      Product_M         739473           3000
+          P0162      Product_H         739473           3000
+          P0249      Product_I         739473           3000
+          P0403      Product_K         739473           3000
+          P0015      Product_E         739471           1000
+          P0467      Product_K         739471           1000
+          P0316      Product_J         739471           1000
+          P0373      Product_L         739475           5000
+          P0351      Product_E         739472           1000
+          P0088      Product_E         739472           1000
+          P0139      Product_E         739472           1000
+          P0365      Product_E         739472           1000
+          P0059      Product_E         739472           1000
+          P0364      Product_C         739474           3000
+          P0426      Product_C         739474           3000
+          P0305      Product_H         739474           3000
+          P0183      Product_A         739474           3000
+          P0099      Product_F         739474           3000
+          P0484      Product_F         739476           5000
+          P0045      Product_B         739476           5000
+          P0499      Product_F         739475           3000
+          P0175      Product_L         739475           3000
+          P0097      Product_K         739475           3000
+          P0257      Product_D         739473           1000
+          P0381      Product_I         739473            300
+          P0211      Product_B         739473           1000
+          P0038      Product_B         739473           1000
+          P0321      Product_B         739477           5000
+          P0177      Product_K         739476           3000
+          P0427      Product_A         739476           3000
+          P0406      Product_M         739474           1000
+          P0003      Product_D         739474           1000
+          P0391      Product_L         739474           1000
+          P0153      Product_E         739474           1000
+          P0333      Product_A         739478           5000
+          P0374      Product_K         739478           5000
+          P0209      Product_I         739478           5000
+          P0214      Product_M         739475           1000
+          P0350      Product_L         739477           3000
+          P0444      Product_B         739477           3000
+          P0399      Product_L         739477           3000
+          P0219      Product_M         739477           3000
+          P0012      Product_A         739475           1000
+          P0111      Product_J         739475           1000
+          P0307      Product_H         739479           5000
+          P0191      Product_E         739479           5000
+          P0500      Product_J         739479           5000
+          P0495      Product_C         739476           1000
+          P0380      Product_H         739476           1000
+          P0208      Product_I         739476            200
+          P0188      Product_K         739478           3000
+          P0074      Product_M         739478           3000
+          P0297      Product_J         739478           3000
+          P0337      Product_G         739478           3000
+          P0281      Product_J         739478           3000
+          P0328      Product_L         739476           1000
+          P0094      Product_G         739476            200
+          P0375      Product_L         739480           5000
+          P0340      Product_K         739480           5000
+          P0470      Product_F         739480           5000
+          P0330      Product_D         739477           1000
+          P0415      Product_I         739477           1000
+          P0224      Product_D         739477            200
+          P0453      Product_M         739477            300
+          P0419      Product_M         739477           1000
+          P0411      Product_H         739477           1000
+          P0352      Product_E         739479           3000
+          P0300      Product_B         739479           3000
+          P0124      Product_J         739481           5000
+          P0182      Product_A         739478           1000
+          P0464      Product_G         739478           1000
+          P0100      Product_B         739478           1000
+          P0326      Product_E         739479           1000
+          P0448      Product_F         739479            300
+          P0060      Product_G         739479            300
+          P0144      Product_J         739481           3000
+          P0172      Product_F         739483           5000
+          P0240      Product_G         739483           5000
+          P0485      Product_L         739483           5000
+          P0388      Product_C         739480           1000
+          P0129      Product_B         739480           1000
+          P0156      Product_K         739480           1000
+          P0506      Product_H         739482           3000
+          P0461      Product_B         739482           3000
+          P0276      Product_E         739482           3000
+          P0349      Product_C         739482           3000
+          P0410      Product_I         739482           3000
+          P0479      Product_A         739484           5000
+          P0466      Product_L         739484           5000
+          P0387      Product_J         739483           3000
+          P0367      Product_D         739483           3000
+          P0312      Product_J         739483           3000
+          P0295      Product_B         739483           3000
+          P0216      Product_L         739483           3000
+          P0168      Product_B         739481           1000
+          P0077      Product_C         739481           1000
+          P0006      Product_F         739485           5000
+          P0155      Product_J         739485           5000
+          P0498      Product_E         739484           3000
+          P0345      Product_E         739484           3000
+          P0339      Product_K         739484           3000
+          P0338      Product_H         739482           1000
+          P0302      Product_I         739482           1000
+          P0421      Product_K         739482            100
+          P0259      Product_J         739482           1000
+          P0267      Product_E         739482           1000
+          P0053      Product_H         739486           5000
+          P0096      Product_A         739486           5000
+          P0171      Product_M         739483            200
+          P0063      Product_F         739483           1000
+          P0176      Product_A         739485           3000
+          P0395      Product_H         739485           3000
+          P0200      Product_A         739485           3000
+          P0198      Product_J         739485           3000
+          P0311      Product_H         739483           1000
+          P0447      Product_G         739483           1000
+          P0105      Product_H         739483            300
+          P0384      Product_L         739483           1000
+          P0441      Product_K         739487           5000
+          P0051      Product_B         739487           5000
+          P0436      Product_J         739484           1000
+          P0494      Product_H         739486           3000
+          P0238      Product_A         739486           3000
+          P0263      Product_J         739486           3000
+          P0254      Product_K         739486           3000
+          P0026      Product_H         739486           3000
+          P0146      Product_H         739486           3000
+          P0058      Product_J         739487           3000
+          P0264      Product_C         739485           1000
+          P0440      Product_M         739485           1000
+          P0072      Product_F         739485           1000
+          P0206      Product_A         739485           1000
+          P0009      Product_G         739487           3000
+          P0413      Product_I         739487           3000
+          P0225      Product_B         739489           5000
+          P0117      Product_G         739488           3000
+          P0217      Product_K         739488           3000
+          P0353      Product_G         739488           3000
+          P0430      Product_E         739488           3000
+          P0035      Product_E         739486            200
+          P0303      Product_H         739488           3000
+          P0418      Product_A         739490           5000
+          P0446      Product_L         739490           5000
+          P0332      Product_J         739489           3000
+          P0185      Product_M         739489           3000
+          P0483      Product_G         739490           4000
+          P0108      Product_C         739490           4000
+          P0434      Product_D         739489           3000
+          P0085      Product_J         739487           1000
+          P0082      Product_K         739487           1000
+          P0298      Product_B         739487           1000
+          P0442      Product_B         739488           2000
+          P0101      Product_C         739488           2000
+          P0472      Product_E         739488           2000
+          P0289      Product_C         739487           1000
+          P0160      Product_L         739491           5000
+          P0080      Product_G         739491           5000
+          P0083      Product_E         739490           3000
+          P0414      Product_H         739490           3000
+          P0095      Product_K         739490           3000
+          P0078      Product_E         739490           3000
+          P0193      Product_D         739488           1000
+          P0347      Product_H         739489           2000
+          P0104      Product_G         739488           1000
+          P0069      Product_C         739492           5000
+          P0256      Product_I         739492           5000
+          P0482      Product_I         739492           5000
+          P0120      Product_E         739489           1000
+          P0401      Product_G         739491           3000
+          P0258      Product_D         739491           3000
+          P0288      Product_M         739491           3000
+          P0480      Product_C         739491           3000
+          P0136      Product_J         739489           1000
+          P0465      Product_F         739493           5000
+          P0194      Product_L         739490           1000
+          P0237      Product_I         739490            200
+          P0362      Product_E         739491           2000
+          P0273      Product_H         739492           3000
+          P0389      Product_K         739492           3000
+          P0115      Product_H         739492           3000
+          P0486      Product_L         739493           4000
+          P0043      Product_J         739493           4000
+          P0166      Product_E         739492           3000
+          P0431      Product_E         739491           2000
+          P0223      Product_F         739491           2000
+          P0065      Product_B         739490           1000
+          P0049      Product_H         739490            200
+          P0090      Product_E         739494           5000
+          P0227      Product_B         739494           5000
+          P0239      Product_F         739491           1000
+          P0197      Product_B         739491           1000
+          P0106      Product_L         739491            200
+          P0064      Product_E         739493           3000
+          P0265      Product_H         739493           3000
+          P0119      Product_M         739493           3000
+          P0491      Product_B         739493           3000
+          P0195      Product_J         739493           3000
+          P0459      Product_G         739494           4000
+          P0014      Product_F         739494           4000
+          P0151      Product_A         739494           4000
+          P0114      Product_J         739491           1000
+          P0334      Product_B         739492           2000
+          P0247      Product_M         739492           2000
+          P0207      Product_D         739492           2000
+          P0314      Product_K         739495           5000
+          P0385      Product_L         739495           5000
+          P0398      Product_C         739492           1000
+          P0457      Product_B         739492           1000
+          P0438      Product_M         739492           1000
+          P0433      Product_E         739493           2000
+          P0291      Product_G         739493           2000
+          P0304      Product_M         739493           2000
+          P0046      Product_G         739493           2000
+          P0286      Product_M         739495           4000
+          P0435      Product_K         739495           4000
+          P0028      Product_J         739495           4000
+          P0354      Product_A         739494           3000
+          P0121      Product_G         739493           2000
+          P0190      Product_C         739493           2000
+          P0066      Product_B         739492           1000
+          P0036      Product_I         739492           1000
+          P0469      Product_C         739492           1000
+          P0324      Product_E         739492           1000
+          P0199      Product_G         739492           1000
+          P0201      Product_A         739492           1000
+          P0130      Product_L         739493           1000
+          P0487      Product_C         739493            400
+          P0149      Product_K         739495           3000
+          P0113      Product_H         739495           3000
+          P0363      Product_I         739493            300
+          P0013      Product_G         739494           1000
+          P0327      Product_F         739495           2000
+          P0071      Product_B         739495           2000
+          P0283      Product_M         739494           1000
+          P0134      Product_K         739494           1000
+          P0170      Product_F         739495           1000
+          P0143      Product_L         739495            300
+          P0142      Product_J         739495           1000
+          P0497      Product_C         739495            100
+          P0355      Product_J         739495           1000
+          P0226      Product_J         739495            400
+          P0493      Product_I         739495           1000
+
+             - End -
+
+==========================================================================================
+
+***PERFORMANCE
+Plant_X:
+         Number of days in use:                   30 days
+         Total quantity produced:           9000 (in total)
+         Utilization of the plant:             100.0 %
+
+Plant_Y:
+         Number of days in use:                   30 days
+         Total quantity produced:          11800 (in total)
+         Utilization of the plant:              98.3 %
+
+Plant_Z:
+         Number of days in use:                   29 days
+         Total quantity produced:          14500 (in total)
+         Utilization of the plant:             100.0 %
+
+Overall of utilization:                         99.4 %

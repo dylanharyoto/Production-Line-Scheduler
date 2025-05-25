@@ -1,0 +1,552 @@
+***PLS Schedule Analysis Report***
+
+Algorithm used: FCFS
+
+There are 14 Orders ACCEPTED. Details are as follows:
+
+   ORDER NUMBER          START            END           DAYS       QUANTITY          PLANT
+==========================================================================================
+          P0001     2024-08-01     2024-08-02              2            600        Plant_X
+          P0001     2024-08-01     2024-08-01              1            400        Plant_Y
+          P0001     2024-08-01     2024-08-02              2           1000        Plant_Z
+          P0002     2024-08-03     2024-08-05              3            800        Plant_X
+          P0002     2024-08-02     2024-08-04              3           1200        Plant_Y
+          P0002     2024-08-03     2024-08-04              2           1000        Plant_Z
+          P0003     2024-08-06     2024-08-06              1            100        Plant_X
+          P0003     2024-08-05     2024-08-05              1            400        Plant_Y
+          P0003     2024-08-05     2024-08-05              1            500        Plant_Z
+          P0005     2024-08-07     2024-08-09              3            800        Plant_X
+          P0005     2024-08-06     2024-08-08              3           1200        Plant_Y
+          P0005     2024-08-06     2024-08-09              4           2000        Plant_Z
+          P0006     2024-08-10     2024-08-13              4           1000        Plant_X
+          P0006     2024-08-09     2024-08-13              5           2000        Plant_Y
+          P0006     2024-08-10     2024-08-13              4           2000        Plant_Z
+          P0007     2024-08-14     2024-08-15              2            600        Plant_X
+          P0007     2024-08-14     2024-08-14              1            400        Plant_Y
+          P0007     2024-08-14     2024-08-15              2           1000        Plant_Z
+          P0008     2024-08-16     2024-08-16              1            300        Plant_X
+          P0008     2024-08-15     2024-08-17              3           1200        Plant_Y
+          P0008     2024-08-16     2024-08-16              1            500        Plant_Z
+          P0009     2024-08-17     2024-08-19              3            700        Plant_X
+          P0009     2024-08-18     2024-08-19              2            800        Plant_Y
+          P0009     2024-08-17     2024-08-19              3           1500        Plant_Z
+          P0013     2024-08-20     2024-08-20              1            100        Plant_X
+          P0013     2024-08-20     2024-08-20              1            400        Plant_Y
+          P0013     2024-08-20     2024-08-20              1            500        Plant_Z
+          P0014     2024-08-21     2024-08-23              3            900        Plant_X
+          P0014     2024-08-21     2024-08-24              4           1600        Plant_Y
+          P0014     2024-08-21     2024-08-23              3           1500        Plant_Z
+          P0024     2024-08-24     2024-08-27              4           1200        Plant_X
+          P0024     2024-08-25     2024-08-26              2            800        Plant_Y
+          P0024     2024-08-24     2024-08-27              4           2000        Plant_Z
+          P0027     2024-08-28     2024-08-28              1            100        Plant_X
+          P0027     2024-08-27     2024-08-27              1            400        Plant_Y
+          P0028     2024-08-29     2024-08-31              3            800        Plant_X
+          P0028     2024-08-28     2024-08-30              3           1200        Plant_Y
+          P0028     2024-08-28     2024-08-31              4           2000        Plant_Z
+          P0143     2024-08-31     2024-08-31              1            300        Plant_Y
+
+             - End -
+
+==========================================================================================
+
+There are 474 Orders REJECTED. Details are as follows:
+
+   ORDER NUMBER   PRODUCT NAME       DUE DATE       QUANTITY
+==========================================================================================
+          P0011      Product_J     2024-08-01           3000
+          P0012      Product_A     2024-08-11           1000
+          P0015      Product_E     2024-08-07           1000
+          P0016      Product_G     2024-08-18           2000
+          P0017      Product_D     2024-08-07           2000
+          P0019      Product_E     2024-08-15           4000
+          P0020      Product_M     2024-08-08            400
+          P0021      Product_C     2024-08-07           1000
+          P0023      Product_I     2024-08-11           4000
+          P0025      Product_C     2024-08-16           4000
+          P0026      Product_H     2024-08-22           3000
+          P0030      Product_I     2024-08-06           2000
+          P0031      Product_M     2024-08-04           3000
+          P0032      Product_F     2024-08-04           4000
+          P0033      Product_F     2024-08-20           4000
+          P0034      Product_B     2024-08-05           1000
+          P0035      Product_E     2024-08-22            200
+          P0036      Product_I     2024-08-28           1000
+          P0037      Product_I     2024-08-09            400
+          P0038      Product_B     2024-08-09           1000
+          P0039      Product_F     2024-08-03           1000
+          P0040      Product_D     2024-08-07           4000
+          P0041      Product_D     2024-08-06           3000
+          P0043      Product_J     2024-08-29           4000
+          P0044      Product_G     2024-08-02           1000
+          P0045      Product_B     2024-08-12           5000
+          P0046      Product_G     2024-08-29           2000
+          P0047      Product_C     2024-08-13           4000
+          P0048      Product_D     2024-08-14           4000
+          P0049      Product_H     2024-08-26            200
+          P0050      Product_I     2024-08-13            500
+          P0051      Product_B     2024-08-23           5000
+          P0052      Product_D     2024-08-09           4000
+          P0053      Product_H     2024-08-22           5000
+          P0054      Product_K     2024-08-08           2000
+          P0056      Product_K     2024-08-01            200
+          P0057      Product_J     2024-08-03            400
+          P0058      Product_J     2024-08-23           3000
+          P0059      Product_E     2024-08-08           1000
+          P0060      Product_G     2024-08-15            300
+          P0061      Product_D     2024-08-11           2000
+          P0062      Product_G     2024-08-01           2000
+          P0063      Product_F     2024-08-19           1000
+          P0064      Product_E     2024-08-29           3000
+          P0065      Product_B     2024-08-26           1000
+          P0066      Product_B     2024-08-28           1000
+          P0067      Product_K     2024-08-18           4000
+          P0068      Product_L     2024-08-03           4000
+          P0069      Product_C     2024-08-28           5000
+          P0070      Product_D     2024-08-28            300
+          P0071      Product_B     2024-08-31           2000
+          P0072      Product_F     2024-08-21           1000
+          P0073      Product_B     2024-08-21           4000
+          P0074      Product_M     2024-08-14           3000
+          P0075      Product_M     2024-08-27           4000
+          P0076      Product_D     2024-08-19           4000
+          P0077      Product_C     2024-08-17           1000
+          P0078      Product_E     2024-08-26           3000
+          P0079      Product_H     2024-08-16           2000
+          P0080      Product_G     2024-08-27           5000
+          P0081      Product_B     2024-08-17           4000
+          P0082      Product_K     2024-08-23           1000
+          P0083      Product_E     2024-08-26           3000
+          P0084      Product_H     2024-08-23           4000
+          P0085      Product_J     2024-08-23           1000
+          P0086      Product_F     2024-08-04           4000
+          P0087      Product_B     2024-08-02           1000
+          P0088      Product_E     2024-08-08           1000
+          P0089      Product_I     2024-08-09           2000
+          P0090      Product_E     2024-08-30           5000
+          P0091      Product_E     2024-08-05           5000
+          P0092      Product_B     2024-08-22           2000
+          P0093      Product_B     2024-08-05           2000
+          P0094      Product_G     2024-08-12            200
+          P0095      Product_K     2024-08-26           3000
+          P0096      Product_A     2024-08-22           5000
+          P0097      Product_K     2024-08-11           3000
+          P0098      Product_B     2024-08-05           5000
+          P0099      Product_F     2024-08-10           3000
+          P0100      Product_B     2024-08-14           1000
+          P0101      Product_C     2024-08-24           2000
+          P0102      Product_L     2024-08-08           4000
+          P0103      Product_M     2024-08-16           4000
+          P0104      Product_G     2024-08-24           1000
+          P0105      Product_H     2024-08-19            300
+          P0106      Product_L     2024-08-27            200
+          P0107      Product_B     2024-08-11            400
+          P0108      Product_C     2024-08-26           4000
+          P0109      Product_H     2024-08-17           2000
+          P0110      Product_I     2024-08-08           5000
+          P0111      Product_J     2024-08-11           1000
+          P0112      Product_A     2024-08-20           4000
+          P0113      Product_H     2024-08-31           3000
+          P0114      Product_J     2024-08-27           1000
+          P0115      Product_H     2024-08-28           3000
+          P0116      Product_J     2024-08-03           2000
+          P0117      Product_G     2024-08-24           3000
+          P0118      Product_C     2024-08-27            500
+          P0119      Product_M     2024-08-29           3000
+          P0120      Product_E     2024-08-25           1000
+          P0121      Product_G     2024-08-29           2000
+          P0122      Product_E     2024-08-12           4000
+          P0123      Product_M     2024-08-05           2000
+          P0124      Product_J     2024-08-17           5000
+          P0125      Product_E     2024-08-16            400
+          P0126      Product_D     2024-08-01           1000
+          P0128      Product_G     2024-08-02           5000
+          P0129      Product_B     2024-08-16           1000
+          P0130      Product_L     2024-08-29           1000
+          P0131      Product_M     2024-08-12           4000
+          P0132      Product_G     2024-08-11           4000
+          P0133      Product_E     2024-08-06           4000
+          P0134      Product_K     2024-08-30           1000
+          P0135      Product_M     2024-08-16           4000
+          P0136      Product_J     2024-08-25           1000
+          P0137      Product_I     2024-08-22           2000
+          P0138      Product_M     2024-08-18           4000
+          P0139      Product_E     2024-08-08           1000
+          P0140      Product_B     2024-08-21           4000
+          P0141      Product_F     2024-08-10           2000
+          P0142      Product_J     2024-08-31           1000
+          P0144      Product_J     2024-08-17           3000
+          P0145      Product_J     2024-08-06           2000
+          P0146      Product_H     2024-08-22           3000
+          P0147      Product_H     2024-08-10           4000
+          P0148      Product_H     2024-08-01           4000
+          P0149      Product_K     2024-08-31           3000
+          P0150      Product_M     2024-08-14           4000
+          P0151      Product_A     2024-08-30           4000
+          P0152      Product_A     2024-08-06           2000
+          P0153      Product_E     2024-08-10           1000
+          P0154      Product_B     2024-08-03           3000
+          P0155      Product_J     2024-08-21           5000
+          P0156      Product_K     2024-08-16           1000
+          P0157      Product_M     2024-08-19           4000
+          P0158      Product_B     2024-08-19           2000
+          P0159      Product_F     2024-08-31           2000
+          P0160      Product_L     2024-08-27           5000
+          P0161      Product_K     2024-08-09           4000
+          P0162      Product_H     2024-08-09           3000
+          P0163      Product_D     2024-08-03           4000
+          P0165      Product_E     2024-08-02           5000
+          P0166      Product_E     2024-08-28           3000
+          P0167      Product_D     2024-08-12           4000
+          P0168      Product_B     2024-08-17           1000
+          P0169      Product_A     2024-08-03           4000
+          P0170      Product_F     2024-08-31           1000
+          P0171      Product_M     2024-08-19            200
+          P0172      Product_F     2024-08-19           5000
+          P0173      Product_F     2024-08-18           4000
+          P0174      Product_F     2024-08-08           2000
+          P0175      Product_L     2024-08-11           3000
+          P0176      Product_A     2024-08-21           3000
+          P0177      Product_K     2024-08-12           3000
+          P0178      Product_M     2024-08-09           3000
+          P0179      Product_I     2024-08-06           4000
+          P0180      Product_D     2024-08-02           2000
+          P0181      Product_A     2024-08-03           1000
+          P0182      Product_A     2024-08-14           1000
+          P0183      Product_A     2024-08-10           3000
+          P0184      Product_G     2024-08-01           3000
+          P0185      Product_M     2024-08-25           3000
+          P0186      Product_K     2024-08-14           4000
+          P0187      Product_I     2024-08-04           4000
+          P0188      Product_K     2024-08-14           3000
+          P0189      Product_G     2024-08-11           4000
+          P0190      Product_C     2024-08-29           2000
+          P0191      Product_E     2024-08-15           5000
+          P0192      Product_L     2024-08-13           4000
+          P0193      Product_D     2024-08-24           1000
+          P0194      Product_L     2024-08-26           1000
+          P0195      Product_J     2024-08-29           3000
+          P0197      Product_B     2024-08-27           1000
+          P0198      Product_J     2024-08-21           3000
+          P0199      Product_G     2024-08-28           1000
+          P0200      Product_A     2024-08-21           3000
+          P0201      Product_A     2024-08-28           1000
+          P0202      Product_D     2024-08-15           4000
+          P0203      Product_L     2024-08-03           2000
+          P0204      Product_D     2024-08-28           4000
+          P0205      Product_B     2024-08-06           3000
+          P0206      Product_A     2024-08-21           1000
+          P0207      Product_D     2024-08-28           2000
+          P0208      Product_I     2024-08-12            200
+          P0209      Product_I     2024-08-14           5000
+          P0210      Product_B     2024-08-04           4000
+          P0211      Product_B     2024-08-09           1000
+          P0212      Product_C     2024-08-01           3000
+          P0214      Product_M     2024-08-11           1000
+          P0215      Product_D     2024-08-07           5000
+          P0216      Product_L     2024-08-19           3000
+          P0217      Product_K     2024-08-24           3000
+          P0218      Product_M     2024-08-04           1000
+          P0219      Product_M     2024-08-13           3000
+          P0220      Product_F     2024-08-07           3000
+          P0221      Product_E     2024-08-28           4000
+          P0222      Product_G     2024-08-30            300
+          P0223      Product_F     2024-08-27           2000
+          P0224      Product_D     2024-08-13            200
+          P0225      Product_B     2024-08-25           5000
+          P0226      Product_J     2024-08-31            400
+          P0227      Product_B     2024-08-30           5000
+          P0228      Product_A     2024-08-05           3000
+          P0229      Product_M     2024-08-05           5000
+          P0230      Product_J     2024-08-07           4000
+          P0231      Product_G     2024-08-10           2000
+          P0232      Product_J     2024-08-04           2000
+          P0233      Product_B     2024-08-01           3000
+          P0234      Product_F     2024-08-03            100
+          P0235      Product_F     2024-08-03           3000
+          P0236      Product_M     2024-08-01           5000
+          P0237      Product_I     2024-08-26            200
+          P0238      Product_A     2024-08-22           3000
+          P0239      Product_F     2024-08-27           1000
+          P0240      Product_G     2024-08-19           5000
+          P0241      Product_J     2024-08-28            300
+          P0242      Product_J     2024-08-17           2000
+          P0243      Product_F     2024-08-05           5000
+          P0244      Product_K     2024-08-01           1000
+          P0245      Product_H     2024-08-06           3000
+          P0246      Product_A     2024-08-13           2000
+          P0247      Product_M     2024-08-28           2000
+          P0248      Product_L     2024-08-04            500
+          P0249      Product_I     2024-08-09           3000
+          P0250      Product_F     2024-08-05            400
+          P0251      Product_L     2024-08-07           5000
+          P0252      Product_A     2024-08-09           4000
+          P0254      Product_K     2024-08-22           3000
+          P0255      Product_M     2024-08-20           2000
+          P0256      Product_I     2024-08-28           5000
+          P0257      Product_D     2024-08-09           1000
+          P0258      Product_D     2024-08-27           3000
+          P0259      Product_J     2024-08-18           1000
+          P0260      Product_B     2024-08-08           4000
+          P0261      Product_H     2024-08-13           2000
+          P0262      Product_F     2024-08-03           3000
+          P0263      Product_J     2024-08-22           3000
+          P0264      Product_C     2024-08-21           1000
+          P0265      Product_H     2024-08-29           3000
+          P0266      Product_L     2024-08-10           2000
+          P0267      Product_E     2024-08-18           1000
+          P0268      Product_E     2024-08-28           4000
+          P0269      Product_G     2024-08-04           4000
+          P0270      Product_B     2024-08-07           4000
+          P0271      Product_A     2024-08-16           2000
+          P0272      Product_M     2024-08-01           1000
+          P0273      Product_H     2024-08-28           3000
+          P0274      Product_I     2024-08-20           4000
+          P0275      Product_J     2024-08-12           2000
+          P0276      Product_E     2024-08-18           3000
+          P0277      Product_I     2024-08-04           4000
+          P0278      Product_F     2024-08-17            400
+          P0279      Product_C     2024-08-19           4000
+          P0281      Product_J     2024-08-14           3000
+          P0282      Product_M     2024-08-19            400
+          P0283      Product_M     2024-08-30           1000
+          P0284      Product_B     2024-08-05           1000
+          P0285      Product_I     2024-08-18           4000
+          P0286      Product_M     2024-08-31           4000
+          P0287      Product_C     2024-08-06           3000
+          P0288      Product_M     2024-08-27           3000
+          P0289      Product_C     2024-08-23           1000
+          P0290      Product_C     2024-08-09           5000
+          P0291      Product_G     2024-08-29           2000
+          P0292      Product_J     2024-08-04           3000
+          P0294      Product_D     2024-08-24           4000
+          P0295      Product_B     2024-08-19           3000
+          P0296      Product_J     2024-08-07           3000
+          P0297      Product_J     2024-08-14           3000
+          P0298      Product_B     2024-08-23           1000
+          P0299      Product_D     2024-08-01            400
+          P0300      Product_B     2024-08-15           3000
+          P0301      Product_J     2024-08-30           2000
+          P0302      Product_I     2024-08-18           1000
+          P0303      Product_H     2024-08-24           3000
+          P0304      Product_M     2024-08-29           2000
+          P0305      Product_H     2024-08-10           3000
+          P0306      Product_M     2024-08-04           2000
+          P0307      Product_H     2024-08-15           5000
+          P0308      Product_I     2024-08-29           2000
+          P0309      Product_H     2024-08-16           2000
+          P0310      Product_C     2024-08-01           4000
+          P0311      Product_H     2024-08-19           1000
+          P0312      Product_J     2024-08-19           3000
+          P0313      Product_H     2024-08-05           3000
+          P0314      Product_K     2024-08-31           5000
+          P0315      Product_E     2024-08-04           3000
+          P0316      Product_J     2024-08-07           1000
+          P0317      Product_K     2024-08-25            500
+          P0318      Product_H     2024-08-03           1000
+          P0320      Product_L     2024-08-03           2000
+          P0321      Product_B     2024-08-13           5000
+          P0322      Product_I     2024-08-13           2000
+          P0323      Product_M     2024-08-18           4000
+          P0324      Product_E     2024-08-28           1000
+          P0325      Product_J     2024-08-17           2000
+          P0326      Product_E     2024-08-15           1000
+          P0327      Product_F     2024-08-31           2000
+          P0328      Product_L     2024-08-12           1000
+          P0329      Product_D     2024-08-23           2000
+          P0330      Product_D     2024-08-13           1000
+          P0331      Product_J     2024-08-04           4000
+          P0332      Product_J     2024-08-25           3000
+          P0333      Product_A     2024-08-14           5000
+          P0334      Product_B     2024-08-28           2000
+          P0335      Product_C     2024-08-13           2000
+          P0336      Product_M     2024-08-13           2000
+          P0337      Product_G     2024-08-14           3000
+          P0338      Product_H     2024-08-18           1000
+          P0339      Product_K     2024-08-20           3000
+          P0340      Product_K     2024-08-16           5000
+          P0341      Product_A     2024-08-02           2000
+          P0343      Product_D     2024-08-20           2000
+          P0344      Product_B     2024-08-01           3000
+          P0345      Product_E     2024-08-20           3000
+          P0346      Product_B     2024-08-05           3000
+          P0347      Product_H     2024-08-25           2000
+          P0348      Product_M     2024-08-13           2000
+          P0349      Product_C     2024-08-18           3000
+          P0350      Product_L     2024-08-13           3000
+          P0351      Product_E     2024-08-08           1000
+          P0352      Product_E     2024-08-15           3000
+          P0353      Product_G     2024-08-24           3000
+          P0354      Product_A     2024-08-30           3000
+          P0355      Product_J     2024-08-31           1000
+          P0356      Product_D     2024-08-05           4000
+          P0357      Product_B     2024-08-02           1000
+          P0358      Product_H     2024-08-19           4000
+          P0360      Product_K     2024-08-08            500
+          P0361      Product_K     2024-08-11           4000
+          P0362      Product_E     2024-08-27           2000
+          P0363      Product_I     2024-08-29            300
+          P0364      Product_C     2024-08-10           3000
+          P0365      Product_E     2024-08-08           1000
+          P0366      Product_M     2024-08-02           5000
+          P0367      Product_D     2024-08-19           3000
+          P0368      Product_J     2024-08-14           2000
+          P0369      Product_I     2024-08-08           3000
+          P0370      Product_B     2024-08-05           5000
+          P0371      Product_H     2024-08-03           4000
+          P0372      Product_F     2024-08-10           4000
+          P0373      Product_L     2024-08-11           5000
+          P0374      Product_K     2024-08-14           5000
+          P0375      Product_L     2024-08-16           5000
+          P0376      Product_E     2024-08-24           4000
+          P0378      Product_C     2024-08-29           4000
+          P0379      Product_L     2024-08-05           4000
+          P0380      Product_H     2024-08-12           1000
+          P0381      Product_I     2024-08-09            300
+          P0382      Product_H     2024-08-10           4000
+          P0383      Product_J     2024-08-02           1000
+          P0384      Product_L     2024-08-19           1000
+          P0385      Product_L     2024-08-31           5000
+          P0386      Product_J     2024-08-22           4000
+          P0387      Product_J     2024-08-19           3000
+          P0388      Product_C     2024-08-16           1000
+          P0389      Product_K     2024-08-28           3000
+          P0390      Product_A     2024-08-24           4000
+          P0391      Product_L     2024-08-10           1000
+          P0392      Product_J     2024-08-18           4000
+          P0393      Product_M     2024-08-12           2000
+          P0394      Product_I     2024-08-08            500
+          P0395      Product_H     2024-08-21           3000
+          P0396      Product_E     2024-08-05           4000
+          P0397      Product_K     2024-08-01           1000
+          P0398      Product_C     2024-08-28           1000
+          P0399      Product_L     2024-08-13           3000
+          P0400      Product_I     2024-08-02           3000
+          P0401      Product_G     2024-08-27           3000
+          P0402      Product_H     2024-08-06           3000
+          P0403      Product_K     2024-08-09           3000
+          P0404      Product_A     2024-08-15            500
+          P0405      Product_I     2024-08-23           4000
+          P0406      Product_M     2024-08-10           1000
+          P0407      Product_L     2024-08-01           4000
+          P0408      Product_I     2024-08-03           2000
+          P0409      Product_G     2024-08-05            400
+          P0410      Product_I     2024-08-18           3000
+          P0411      Product_H     2024-08-13           1000
+          P0412      Product_M     2024-08-06           2000
+          P0413      Product_I     2024-08-23           3000
+          P0414      Product_H     2024-08-26           3000
+          P0415      Product_I     2024-08-13           1000
+          P0416      Product_H     2024-08-05           2000
+          P0417      Product_C     2024-08-07           4000
+          P0418      Product_A     2024-08-26           5000
+          P0419      Product_M     2024-08-13           1000
+          P0420      Product_E     2024-08-27           4000
+          P0421      Product_K     2024-08-18            100
+          P0422      Product_I     2024-08-06           4000
+          P0423      Product_I     2024-08-13            400
+          P0424      Product_M     2024-08-13           2000
+          P0425      Product_F     2024-08-19           2000
+          P0426      Product_C     2024-08-10           3000
+          P0427      Product_A     2024-08-12           3000
+          P0429      Product_B     2024-08-15           4000
+          P0430      Product_E     2024-08-24           3000
+          P0431      Product_E     2024-08-27           2000
+          P0432      Product_M     2024-08-13           4000
+          P0433      Product_E     2024-08-29           2000
+          P0434      Product_D     2024-08-25           3000
+          P0435      Product_K     2024-08-31           4000
+          P0436      Product_J     2024-08-20           1000
+          P0437      Product_K     2024-08-04           5000
+          P0438      Product_M     2024-08-28           1000
+          P0439      Product_B     2024-08-04           3000
+          P0440      Product_M     2024-08-21           1000
+          P0441      Product_K     2024-08-23           5000
+          P0442      Product_B     2024-08-24           2000
+          P0444      Product_B     2024-08-13           3000
+          P0445      Product_M     2024-08-01           3000
+          P0446      Product_L     2024-08-26           5000
+          P0447      Product_G     2024-08-19           1000
+          P0448      Product_F     2024-08-15            300
+          P0449      Product_M     2024-08-14           2000
+          P0450      Product_C     2024-08-12            400
+          P0451      Product_B     2024-08-12           4000
+          P0452      Product_M     2024-08-29           4000
+          P0453      Product_M     2024-08-13            300
+          P0454      Product_H     2024-08-26           2000
+          P0455      Product_H     2024-08-21           4000
+          P0457      Product_B     2024-08-28           1000
+          P0458      Product_F     2024-08-04           2000
+          P0459      Product_G     2024-08-30           4000
+          P0460      Product_G     2024-08-08           2000
+          P0461      Product_B     2024-08-18           3000
+          P0462      Product_K     2024-08-25           4000
+          P0463      Product_C     2024-08-19           4000
+          P0464      Product_G     2024-08-14           1000
+          P0465      Product_F     2024-08-29           5000
+          P0466      Product_L     2024-08-20           5000
+          P0467      Product_K     2024-08-07           1000
+          P0468      Product_J     2024-08-18           2000
+          P0469      Product_C     2024-08-28           1000
+          P0470      Product_F     2024-08-16           5000
+          P0471      Product_A     2024-08-21           2000
+          P0472      Product_E     2024-08-24           2000
+          P0473      Product_I     2024-08-04           2000
+          P0474      Product_I     2024-08-13           2000
+          P0475      Product_F     2024-08-06           2000
+          P0477      Product_C     2024-08-20           2000
+          P0478      Product_C     2024-08-05           1000
+          P0479      Product_A     2024-08-20           5000
+          P0480      Product_C     2024-08-27           3000
+          P0481      Product_I     2024-08-04           1000
+          P0482      Product_I     2024-08-28           5000
+          P0483      Product_G     2024-08-26           4000
+          P0484      Product_F     2024-08-12           5000
+          P0485      Product_L     2024-08-19           5000
+          P0486      Product_L     2024-08-29           4000
+          P0487      Product_C     2024-08-29            400
+          P0488      Product_F     2024-08-03           3000
+          P0489      Product_J     2024-08-07           1000
+          P0490      Product_E     2024-08-03           2000
+          P0491      Product_B     2024-08-29           3000
+          P0492      Product_E     2024-08-21           2000
+          P0493      Product_I     2024-08-31           1000
+          P0494      Product_H     2024-08-22           3000
+          P0495      Product_C     2024-08-12           1000
+          P0496      Product_I     2024-08-14           2000
+          P0497      Product_C     2024-08-31            100
+          P0498      Product_E     2024-08-20           3000
+          P0499      Product_F     2024-08-11           3000
+          P0500      Product_J     2024-08-15           5000
+          P0501      Product_M     2024-08-14           2000
+          P0502      Product_A     2024-08-14           2000
+          P0503      Product_I     2024-08-21           4000
+          P0504      Product_L     2024-08-16           2000
+          P0505      Product_E     2024-08-08           5000
+          P0506      Product_H     2024-08-18           3000
+          P0507      Product_F     2024-08-06           3000
+          P0508      Product_D     2024-08-09           5000
+          P0509      Product_K     2024-08-25            400
+          P0510      Product_H     2024-08-08            300
+
+             - End -
+
+==========================================================================================
+
+***PERFORMANCE
+Plant_X:
+         Number of days in use:                   31 days
+         Total quantity produced:           8000 (in total)
+         Utilization of the plant:              86.0 %
+
+Plant_Y:
+         Number of days in use:                   31 days
+         Total quantity produced:          12300 (in total)
+         Utilization of the plant:              99.2 %
+
+Plant_Z:
+         Number of days in use:                   31 days
+         Total quantity produced:          15500 (in total)
+         Utilization of the plant:             100.0 %
+
+Overall of utilization:                         96.2 %

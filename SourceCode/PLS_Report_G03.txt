@@ -1,0 +1,66 @@
+***PLS Schedule Analysis Report***
+
+Algorithm used: FCFS
+
+There are 10 Orders ACCEPTED. Details are as follows:
+
+   ORDER NUMBER          START            END           DAYS       QUANTITY          PLANT
+==========================================================================================
+          P0001     2024-12-05     2024-12-05              1            300        Plant_X
+          P0001     2024-12-05     2024-12-05              1            400        Plant_Y
+          P0001     2024-12-05     2024-12-05              1            500        Plant_Z
+          P0002     2024-12-06     2024-12-07              2            600        Plant_X
+          P0002     2024-12-06     2024-12-07              2            800        Plant_Y
+          P0002     2024-12-06     2024-12-07              2           1000        Plant_Z
+          P0003     2024-12-08     2024-12-08              1            200        Plant_X
+          P0003     2024-12-08     2024-12-08              1            500        Plant_Z
+          P0004     2024-12-09     2024-12-09              1            200        Plant_X
+          P0004     2024-12-08     2024-12-09              2            800        Plant_Y
+          P0004     2024-12-09     2024-12-09              1            500        Plant_Z
+          P0005     2024-12-10     2024-12-10              1            500        Plant_Z
+          P0006     2024-12-10     2024-12-12              3            800        Plant_X
+          P0006     2024-12-10     2024-12-12              3           1200        Plant_Y
+          P0006     2024-12-11     2024-12-12              2           1000        Plant_Z
+          P0007     2024-12-13     2024-12-29             17           5100        Plant_X
+          P0007     2024-12-13     2024-12-28             16           6400        Plant_Y
+          P0007     2024-12-13     2024-12-29             17           8500        Plant_Z
+          P0008     2024-12-30     2024-12-30              1            300        Plant_X
+          P0008     2024-12-29     2024-12-31              3           1200        Plant_Y
+          P0008     2024-12-30     2024-12-30              1            500        Plant_Z
+          P0009     2024-12-31     2024-12-31              1            300        Plant_X
+          P0009     2025-01-01     2025-01-01              1            400        Plant_Y
+          P0009     2024-12-31     2025-01-01              2           1000        Plant_Z
+          P0010     2025-01-01     2025-01-03              3            700        Plant_X
+          P0010     2025-01-02     2025-01-02              1            400        Plant_Y
+          P0010     2025-01-02     2025-01-02              1            500        Plant_Z
+
+             - End -
+
+==========================================================================================
+
+There are 0 Orders REJECTED. Details are as follows:
+
+   ORDER NUMBER   PRODUCT NAME       DUE DATE       QUANTITY
+==========================================================================================
+
+             - End -
+
+==========================================================================================
+
+***PERFORMANCE
+Plant_X:
+         Number of days in use:                   30 days
+         Total quantity produced:           8500 (in total)
+         Utilization of the plant:              94.4 %
+
+Plant_Y:
+         Number of days in use:                   29 days
+         Total quantity produced:          11600 (in total)
+         Utilization of the plant:             100.0 %
+
+Plant_Z:
+         Number of days in use:                   29 days
+         Total quantity produced:          14500 (in total)
+         Utilization of the plant:             100.0 %
+
+Overall of utilization:                         98.6 %
