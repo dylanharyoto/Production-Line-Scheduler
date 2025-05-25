@@ -1,15 +1,4 @@
-﻿Subject: COMP2432 Operating Systems
-
-
 Project: Steel-making Production Line Scheduler
-
-
-Team:
-* BAI Haoran (22097746D)
-* CHAI Wenchang (22096793D)
-* DING Honghe (22099687D)
-* HARYOTO Dominicus Dylan (22099885D)
-* SHEN Zitong (22097304D)
 
 
 Description:
