@@ -1,75 +1,185 @@
-Project: Steel-making Production Line Scheduler
+# Steel-making Production Line Scheduler
 
+## Overview
 
-Description:
-The project aims to optimize the production scheduling of a medium-sized steel-making manufacturer, which currently experiences low machine utilization. In this project, we define ”machine” as ”plant.” Three plants with different production capacities are provided, and the main goal is to utilize the plants as much as possible to speed up the production process, thus enabling more orders to be accepted. 
+This project implements a production line scheduler for a medium-sized steel-making manufacturer, aimed at optimizing machine utilization across three plants (X, Y, and Z) with daily production capacities of 300, 400, and 500 units, respectively. The scheduler processes a set of orders, each with a due date, quantity, and product type, to maximize plant utilization and enable the acceptance of more orders. It supports three scheduling algorithms: First-Come-First-Serve (FCFS), Shortest-Job-First (SJF), and a novel heuristic algorithm called CHAI.
 
+The system consists of a single C program (`PLS_G3.c`) that handles:
+- **Order Management**: Accepts individual orders or batch files with order details.
+- **Scheduling**: Allocates orders to plants using FCFS, SJF, or CHAI algorithms.
+- **Reporting**: Generates reports on plant utilization and scheduling outcomes.
+- **Error Handling**: Validates inputs and logs invalid orders to `invalid.txt`.
 
-Given three plants, X, Y, and Z, with capacities of 300, 400, and 500 units of production per day, respectively, given n orders, where Pi = (P1, P2, . . . , Pn) and Pi ∈ [0, ∞), and given the range of working dates for the plants, our goal is to maximize the utilization of these plants by allocating the n orders. We apply the ’First-Come-First-Serve’ (FCFS) and ’Shortest-Job-First’ (SJF) algorithms to find the optimal verifiable solution for scheduling. Finally, we developed a novel heuristic algorithm called ”CHAI”. 
+## Features
 
+- **Optimized Scheduling**: Maximizes utilization of three plants with different capacities.
+- **Multiple Algorithms**: Supports FCFS, SJF, and CHAI for flexible scheduling.
+- **Order Processing**: Handles individual orders or batch inputs with product categories.
+- **Error Handling**: Validates due dates and inputs, logging errors to a file.
+- **Reporting**: Outputs detailed reports with utilization metrics.
+- **Configurable Period**: Specifies operational periods for scheduling.
 
+## Prerequisites
 
-How To Compile & Execute:
-1. To compile the program, navigate to the directory containing the source code PLS_G3.c.
-2. Open a terminal or command prompt window.
-3. Type the command cc PLS_G3.c -o PLS and press Enter. Replace PLS with the desired name for the executable file.
-4. Once the compilation is successful, execute the program by typing ./PLS and pressing Enter.
+- **C Compiler**: Requires a C compiler (e.g., `gcc` or `cc`) to compile the program.
+- **Operating System**: Compatible with Linux, macOS, or Windows with a C compiler installed.
+- **Dependencies**: Input files (e.g., batch order files) in plain text format.
 
-Test Case:
-=======================================================================
-addPERIOD 2024-12-05 2025-03-07
-addBATCH test_data_G03.dat
-runPLS CHAI | printREPORT > report_03_CHAI.txt
-runPLS FCFS | printREPORT > report_01_FCFS.txt
-runPLS SJF | printREPORT > report_02_SJF.txt
-exitPLS
+## Installation
 
-Commands:
-=======================================================================
-Input
-addPERIOD 2024-06-01 2024-06-30
-Format
-addPERIOD [Start Date] [End Date]
-Usage
-To specify the period (start date and end date) for scheduling the production. Date format is year-month-day, i.e. YYYY-MM-DD.
-=======================================================================
+1. **Install a C Compiler**:
+   - Ensure `gcc` or `cc` is installed on your system. For example, on Ubuntu:
+     ```bash
+     sudo apt-get install gcc
+     ```
 
+2. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+   ```
 
-Input
-addORDER P0001 2024-06-10 2000 Product A
-Format
-addORDER [Order Number] [Due Date] [Quantity] [Product Name]
-Usage
-To add an order and the details to the scheduler, followed by the Order Number, Due Date, Quantity, and Product Name. In this project, we assume there are 9 products in 3 categories. Product_A, B and C belong to Category_1; Product_D, E and F belong to Category_2; and Product_G, H and I belong to Category_3.
-=======================================================================
-Input
-addBATCH orderBATCH01.dat
-Format
-addBATCH [Orders in a batch file]
-Usage
-It is to input multiple orders in one batch file which is a basic text format. That is, there are many lines of addORDER in the file.
-=======================================================================
-Input
-runPLS FCFS | printREPORT > report_01_FCFS.txt
-runPLS SJF | printREPORT > report_02_SJF.txt
-runPLS CHAI | printREPORT > report_03_CHAI.txt
-Format
-runPLS [Algorithm] | printREPORT > [Report file name]
-Usage
-It is to generate a schedule with the specified Algorithm. It executes a scheduling algorithm. Using the vertical bar [|], the schedule is passed to printREPORT command to print a report of that schedule with the analysis details, for example, the utilization. The greater than sign [>] is to export the report to the given file name.
-=======================================================================
-Input
-exitPLS
-Usage
-It is to terminate the program. Here we are expecting the program is terminated properly. For example, all child processes have been terminated and collected successfully.
+3. **Directory Structure**:
+   Ensure the following file is in the project directory:
+   - `PLS_G3.c`
+   - Optional: Batch order files (e.g., `test_data_G03.dat`)
 
+4. **Compile the Program**:
+   Navigate to the project directory and compile the source code:
+   ```bash
+   cc PLS_G3.c -o PLS
+   ```
+   Replace `PLS` with your desired executable name if different.
 
+## Usage
 
+1. **Run the Program**:
+   Execute the compiled program:
+   ```bash
+   ./PLS
+   ```
 
+2. **Input Commands**:
+   Use the following commands interactively in the terminal:
+   - **Set Scheduling Period**:
+     ```bash
+     addPERIOD 2024-12-05 2025-03-07
+     ```
+     Specifies the operational period for scheduling (format: `YYYY-MM-DD`).
 
+   - **Add a Single Order**:
+     ```bash
+     addORDER P0001 2024-12-10 2000 Product_A
+     ```
+     Adds an order with an order number, due date, quantity, and product name. Products are categorized as:
+     - Category 1: Product_A, Product_B, Product_C
+     - Category 2: Product_D, Product_E, Product_F
+     - Category 3: Product_G, Product_H, Product_I
 
-Error Handling
-1. If an order's due date does not fall within the specified period, it will not be considered for scheduling and will be appended to `invalid.txt`.
-2. If the algorithm name is incorrect, a message will be printed, and the user will be prompted to re-input.
-3. If the batch file is empty, a message will be printed indicating that the file is empty and the user will be prompted to re-input.
-4. If an incorrect command is inputted into the terminal, a message will be printed, and the user will be prompted to re-input.
+   - **Add a Batch of Orders**:
+     ```bash
+     addBATCH test_data_G03.dat
+     ```
+     Processes multiple orders from a text file containing `addORDER` commands.
+
+   - **Run Scheduling and Generate Report**:
+     ```bash
+     runPLS CHAI | printREPORT > report_03_CHAI.txt
+     runPLS FCFS | printREPORT > report_01_FCFS.txt
+     runPLS SJF | printREPORT > report_02_SJF.txt
+     ```
+     Executes the specified algorithm (FCFS, SJF, or CHAI) and outputs a report with utilization details to the specified file.
+
+   - **Exit the Program**:
+     ```bash
+     exitPLS
+     ```
+     Terminates the program, ensuring all child processes are properly closed.
+
+3. **Test Case Example**:
+   Create a batch file (e.g., `test_data_G03.dat`) with order data, then run:
+   ```bash
+   addPERIOD 2024-12-05 2025-03-07
+   addBATCH test_data_G03.dat
+   runPLS CHAI | printREPORT > report_03_CHAI.txt
+   runPLS FCFS | printREPORT > report_01_FCFS.txt
+   runPLS SJF | printREPORT > report_02_SJF.txt
+   exitPLS
+   ```
+
+## Configuration Details
+
+- **Input Format**:
+  - `addPERIOD [Start Date] [End Date]`: Defines the scheduling period (e.g., `2024-12-05 2025-03-07`).
+  - `addORDER [Order Number] [Due Date] [Quantity] [Product Name]`: Specifies order details.
+  - `addBATCH [Batch File]`: Loads multiple orders from a text file.
+  - `runPLS [Algorithm] | printREPORT > [Report File]`: Runs the specified algorithm and saves the report.
+  - `exitPLS`: Terminates the program.
+
+- **Plant Capacities**:
+  - Plant X: 300 units/day
+  - Plant Y: 400 units/day
+  - Plant Z: 500 units/day
+
+- **Product Categories**:
+  - Category 1: Product_A, Product_B, Product_C
+  - Category 2: Product_D, Product_E, Product_F
+  - Category 3: Product_G, Product_H, Product_I
+
+## Error Handling
+
+The program includes robust error handling:
+- **Invalid Due Dates**: Orders with due dates outside the specified period are logged to `invalid.txt` and excluded from scheduling.
+- **Incorrect Algorithm Name**: Prompts the user to re-enter a valid algorithm (FCFS, SJF, or CHAI).
+- **Empty Batch File**: Displays a message and prompts for a valid batch file.
+- **Invalid Commands**: Notifies the user of incorrect commands and requests re-input.
+
+## Example Workflow
+
+1. Compile and run the program:
+   ```bash
+   cc PLS_G3.c -o PLS
+   ./PLS
+   ```
+
+2. Set the scheduling period and add orders:
+   ```bash
+   addPERIOD 2024-12-05 2025-03-07
+   addORDER P0001 2024-12-10 2000 Product_A
+   addBATCH test_data_G03.dat
+   ```
+
+3. Generate schedules and reports:
+   ```bash
+   runPLS CHAI | printREPORT > report_03_CHAI.txt
+   runPLS FCFS | printREPORT > report_01_FCFS.txt
+   runPLS SJF | printREPORT > report_02_SJF.txt
+   ```
+
+4. Exit the program:
+   ```bash
+   exitPLS
+   ```
+
+## Contributing
+
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes and commit (`git commit -m "Add your feature"`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+Please ensure your code follows the project's coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or issues, please open an issue on GitHub or contact [your email or preferred contact method].
+
+---
+
+*Last updated: July 1, 2025*
